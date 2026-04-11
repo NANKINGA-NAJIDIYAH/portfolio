@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Najidiyah Nankinga — Biomedical Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#1a2e4a;--teal:#1d9e75;--teal-light:#e1f5ee;--teal-mid:#9fe1cb;
+  --cream:#fafaf8;--stone:#f1efe8;--text:#1a1a1a;--muted:#5f5e5a;
+  --border:rgba(0,0,0,0.08)
+}
+body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--cream);font-size:15px;line-height:1.7}
+nav{position:sticky;top:0;background:rgba(250,250,248,0.95);backdrop-filter:blur(8px);border-bottom:0.5px solid var(--border);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px;z-index:100}
+.nav-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--navy)}
+.nav-links{display:flex;gap:1.5rem}
+.nav-links a{font-size:13px;color:var(--muted);text-decoration:none;font-weight:500;letter-spacing:0.02em;transition:color 0.2s}
+.nav-links a:hover{color:var(--teal)}
+.hero{background:var(--navy);padding:5rem 2rem 4rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-60px;right:-60px;width:320px;height:320px;border-radius:50%;background:rgba(29,158,117,0.08);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-40px;left:20%;width:180px;height:180px;border-radius:50%;background:rgba(29,158,117,0.05);pointer-events:none}
+.hero-inner{max-width:720px;margin:0 auto;position:relative}
+.hero-tag{display:inline-block;background:rgba(29,158,117,0.2);color:#9fe1cb;font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:4px 14px;border-radius:20px;margin-bottom:1.5rem}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,3.6rem);font-weight:600;color:#fff;line-height:1.15;margin-bottom:1rem}
+.hero h1 em{color:#9fe1cb;font-style:italic}
+.hero-sub{font-size:15px;color:rgba(255,255,255,0.65);max-width:520px;margin-bottom:2rem;font-weight:300}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn-primary{background:var(--teal);color:#fff;padding:10px 22px;border-radius:6px;font-size:13px;font-weight:500;text-decoration:none;transition:opacity 0.2s}
+.btn-primary:hover{opacity:0.88}
+.btn-outline{background:transparent;color:rgba(255,255,255,0.8);padding:10px 22px;border-radius:6px;border:0.5px solid rgba(255,255,255,0.25);font-size:13px;font-weight:500;text-decoration:none;transition:all 0.2s}
+.btn-outline:hover{border-color:rgba(255,255,255,0.6);color:#fff}
+.section{padding:4rem 2rem;max-width:720px;margin:0 auto}
+.section-label{font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:0.5rem}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--navy);margin-bottom:1.5rem;line-height:1.2}
+.divider{border:none;border-top:0.5px solid var(--border);margin:0}
+.about-text{font-size:15px;color:#2c2c2a;line-height:1.8;margin-bottom:1rem}
+.about-text strong{color:var(--navy);font-weight:500}
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
+.stat-card{background:var(--stone);border-radius:10px;padding:1.25rem;text-align:center}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--navy)}
+.stat-label{font-size:12px;color:var(--muted);margin-top:2px}
+.projects-grid{display:grid;gap:1rem}
+.project-card{background:#fff;border:0.5px solid var(--border);border-radius:12px;padding:1.5rem;transition:border-color 0.2s}
+.project-card:hover{border-color:var(--teal-mid)}
+.project-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:0.75rem;gap:1rem}
+.project-badge{font-size:11px;font-weight:500;padding:3px 10px;border-radius:12px;background:var(--teal-light);color:#0f6e56;white-space:nowrap;flex-shrink:0}
+.project-badge.internship{background:#eeedfe;color:#534ab7}
+.project-badge.research{background:#faeeda;color:#854f0b}
+.project-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--navy);margin-bottom:0.4rem}
+.project-desc{font-size:13.5px;color:var(--muted);line-height:1.7}
+.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0.75rem}
+.skill-item{display:flex;align-items:center;gap:10px;background:#fff;border:0.5px solid var(--border);border-radius:8px;padding:0.75rem 1rem}
+.skill-dot{width:8px;height:8px;border-radius:50%;background:var(--teal);flex-shrink:0}
+.skill-name{font-size:13.5px;color:#2c2c2a}
+.edu-card{background:#fff;border:0.5px solid var(--border);border-radius:12px;padding:1.5rem;margin-bottom:1rem}
+.edu-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.5rem;gap:1rem}
+.edu-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--navy)}
+.edu-year{font-size:12px;color:var(--muted);background:var(--stone);padding:2px 10px;border-radius:10px;white-space:nowrap}
+.edu-school{font-size:13px;color:var(--teal);font-weight:500;margin-bottom:0.25rem}
+.edu-detail{font-size:13px;color:var(--muted)}
+.contact-box{background:var(--navy);border-radius:16px;padding:2.5rem;text-align:center}
+.contact-box h3{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color:#fff;margin-bottom:0.75rem}
+.contact-box p{color:rgba(255,255,255,0.6);font-size:14px;margin-bottom:1.75rem;font-weight:300}
+.contact-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.contact-link{background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.85);padding:9px 20px;border-radius:6px;font-size:13px;font-weight:500;text-decoration:none;border:0.5px solid rgba(255,255,255,0.15);transition:all 0.2s}
+.contact-link:hover{background:rgba(29,158,117,0.3);border-color:rgba(29,158,117,0.5);color:#fff}
+.contact-link.primary{background:var(--teal);border-color:var(--teal);color:#fff}
+.contact-link.primary:hover{opacity:0.88}
+footer{text-align:center;padding:2rem;font-size:12px;color:var(--muted);border-top:0.5px solid var(--border)}
+@media(max-width:540px){
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+  .skills-grid{grid-template-columns:1fr}
+  .nav-links{gap:1rem}
+  .project-top{flex-direction:column;gap:0.5rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-name">Najidiyah Nankinga</span>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">Biomedical Engineer · Uganda</div>
+    <h1>Designing healthcare <em>solutions</em> for those who need them most</h1>
+    <p class="hero-sub">Final-year Biomedical Engineering student at Makerere University, working at the intersection of maternal health, assistive technology, and AI in resource-limited settings.</p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn-primary">View My Work</a>
+      <a href="#contact" class="btn-outline">Get In Touch</a>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="section" id="about">
+  <div class="section-label">About Me</div>
+  <div class="section-title">Purposeful engineering,<br>rooted in personal story</div>
+  <p class="about-text">I am a final-year Biomedical Engineering student at Makerere University, Uganda, driven by a deeply personal mission. My younger brother was diagnosed with <strong>cerebral palsy</strong> at age two — an experience that shaped my understanding of healthcare gaps and strengthened my resolve to create solutions that matter.</p>
+  <p class="about-text">My work spans <strong>maternal health</strong>, <strong>neonatal care</strong>, <strong>assistive technology</strong>, and <strong>AI in healthcare</strong>. I am committed to building devices and systems that work in real African clinical settings — not just in well-resourced labs.</p>
+  <p class="about-text">Beyond engineering, I hold three leadership roles, am an Aspire Leaders Program alumna, and an AWS AI & ML Scholar. I aspire to pursue a Masters and PhD, establish an NGO focused on cerebral palsy, and ultimately contribute to science and technology policy at the national level.</p>
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-num">4+</div>
+      <div class="stat-label">Projects & Internships</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">3</div>
+      <div class="stat-label">Leadership Roles</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">2027</div>
+      <div class="stat-label">Expected Graduation</div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- PROJECTS -->
+<div class="section" id="projects">
+  <div class="section-label">Projects & Experience</div>
+  <div class="section-title">Where purpose meets practice</div>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <div class="project-top">
+        <div class="project-title">PrevaP ulse</div>
+        <span class="project-badge">Final Year Project</span>
+      </div>
+      <p class="project-desc">Arterial stiffness detection device for pregnant women to identify those at risk of developing preeclampsia. Designed for use in resource-limited clinical settings in Uganda.</p>
+    </div>
+
+    <div class="project-card">
+      <div class="project-top">
+        <div class="project-title">TrioTemp — Neonatal Temperature Monitor</div>
+        <span class="project-badge internship">Internship</span>
+      </div>
+      <p class="project-desc">Contributed to the design of a neonatal skin temperature monitoring solution during the Makerere-Duke Design Fellowship. Focused on low-cost, robust hardware for newborn care.</p>
+    </div>
+
+    <div class="project-card">
+      <div class="project-top">
+        <div class="project-title">Generative AI Partograph App</div>
+        <span class="project-badge research">AWS Scholars</span>
+      </div>
+      <p class="project-desc">Built a no-code generative AI application using PartyRock focused on maternal health, generating content related to partograph-based labour monitoring to support clinical awareness and decision-making.</p>
+    </div>
+
+    <div class="project-card">
+      <div class="project-top">
+        <div class="project-title">FREO2 LPOS — Regulatory Documentation</div>
+        <span class="project-badge research">Consultancy</span>
+      </div>
+      <p class="project-desc">Produced medical device regulatory documentation for an oxygen storage system under Dr. Robert Ssekitoleko, including device description, intended use, UDI, SRN, and harmonised standards classification.</p>
+    </div>
+
+    <div class="project-card">
+      <div class="project-top">
+        <div class="project-title">VectorCam Fieldwork</div>
+        <span class="project-badge research">Research</span>
+      </div>
+      <p class="project-desc">Participated in mosquito surveillance fieldwork with a Johns Hopkins University team led by Professor Acharya across Mayuge, Iganga, and Kampala districts.</p>
+    </div>
+
+    <div class="project-card">
+      <div class="project-top">
+        <div class="project-title">Digital e-Partograph</div>
+        <span class="project-badge research">Research</span>
+      </div>
+      <p class="project-desc">Proposed a WHO-compliant digital partograph for labour monitoring in Ugandan Health Centre III and IV facilities, focused on reducing maternal mortality from obstructed labour.</p>
+    </div>
+
+    <div class="project-card">
+      <div class="project-top">
+        <div class="project-title">Orthosis Project</div>
+        <span class="project-badge internship">Collaboration</span>
+      </div>
+      <p class="project-desc">Interdisciplinary collaboration with the University of New South Wales on assistive device design and orthotics research.</p>
+    </div>
+
+    <div class="project-card">
+      <div class="project-top">
+        <div class="project-title">Cybersecurity in Medical Devices</div>
+        <span class="project-badge internship">DOJO Hub</span>
+      </div>
+      <p class="project-desc">Conducted biomedical research at DOJO Hub focusing on cybersecurity frameworks for medical devices, exploring ISO/IEC 27001 and its application to patient monitoring systems.</p>
+    </div>
+
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- SKILLS & EDUCATION -->
+<div class="section" id="skills">
+  <div class="section-label">Skills & Competencies</div>
+  <div class="section-title">Built through doing, not just studying</div>
+  <div class="skills-grid">
+    <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Arduino programming & embedded systems</span></div>
+    <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Medical device regulatory documentation</span></div>
+    <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Biomedical research & field data collection</span></div>
+    <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Generative AI application development</span></div>
+    <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Technical & scientific writing</span></div>
+    <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Project management & collaboration</span></div>
+    <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Autodesk Fusion 360 (developing)</span></div>
+    <div class="skill-item"><div class="skill-dot"></div><span class="skill-name">Biomedical modeling & simulation</span></div>
+  </div>
+
+  <div style="margin-top:2.5rem">
+    <div class="section-label">Education & Programmes</div>
+    <div style="margin-top:1rem">
+      <div class="edu-card">
+        <div class="edu-top">
+          <div class="edu-title">BSc Biomedical Engineering</div>
+          <span class="edu-year">2021 – 2027</span>
+        </div>
+        <div class="edu-school">Makerere University, Kampala, Uganda</div>
+        <div class="edu-detail">Final Year Project: PrevaP ulse — Arterial Stiffness Detection for Preeclampsia Risk</div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-top">
+          <div class="edu-title">AWS AI & ML Scholars Program</div>
+          <span class="edu-year">Completed</span>
+        </div>
+        <div class="edu-school">Amazon Web Services & Udacity</div>
+        <div class="edu-detail">Generative AI, responsible AI, bias detection, explainability — Final project: maternal health AI app</div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-top">
+          <div class="edu-title">Aspire Leaders Program</div>
+          <span class="edu-year">Completed</span>
+        </div>
+        <div class="edu-school">Harvard-affiliated Leadership Programme</div>
+        <div class="edu-detail">Module 1 completed — leadership development for emerging leaders from underrepresented communities</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- CONTACT -->
+<div class="section" id="contact">
+  <div class="contact-box">
+    <h3>Let's connect</h3>
+    <p>Open to mentorship, research collaborations, internship opportunities,<br>and conversations about biomedical engineering in Africa.</p>
+    <div class="contact-links">
+      <a href="mailto:[YOUR-EMAIL]" class="contact-link primary">Email Me</a>
+      <a href="https://linkedin.com/in/[YOUR-LINKEDIN]" class="contact-link">LinkedIn</a>
+      <a href="[YOUR-CV-LINK]" class="contact-link">Download CV</a>
+      <a href="[YOUR-CAREER-PLAN-LINK]" class="contact-link">Career Plan</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  &copy; 2026 Najidiyah Nankinga &nbsp;&middot;&nbsp; Biomedical Engineering, Makerere University &nbsp;&middot;&nbsp; Kampala, Uganda
+</footer>
+
+</body>
+</html>
